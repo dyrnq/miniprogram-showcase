@@ -5,17 +5,34 @@ Page({
    * 页面的初始数据
    */
   data: {
-    response: ""
+    response: "",
+    requestUrl: "https://h.dyrnq.com/get"
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
+
+  formSubmit: function (event) {
+    var formData = event.detail.value;    
+    this.setData(
+      {
+        "requestUrl": formData.requestUrl
+      }
+    )
+
+    wx.setStorageSync('requestUrl', formData.requestUrl)
 
 
+    this.doRequest()
+
+  },
+
+  doRequest: function(){
+    this.setData(
+      {
+        "response": ""
+      }
+    )
     wx.request({
-      url: 'http://127.0.0.1:15580/greeting', //仅为示例，并非真实的接口地址
+      url: this.data.requestUrl, //仅为示例，并非真实的接口地址
       data: {
         name: 'hehe测试',
         other: '测试'
@@ -51,6 +68,33 @@ Page({
          console.log("request complete")
       }
     });
+
+
+
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad(options) {
+
+
+    try {
+      var value = wx.getStorageSync('requestUrl')
+      if (value) {
+
+        this.setData(
+          {
+            "requestUrl": value
+          }
+        )
+        
+      }
+    } catch (e) {
+      // Do something when catch error
+    }
+
+    this.doRequest()
 
 
   },
@@ -102,5 +146,12 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+
+
+
+  tap() {
+    console.log('tap')
   }
+
 })

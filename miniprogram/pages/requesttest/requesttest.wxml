@@ -1,2 +1,22 @@
 <!--pages/requesttest/requesttest.wxml-->
-<text>{{response}}</text>
+
+
+
+
+<view class="box">
+
+  <form bindsubmit="formSubmit">
+    <view class="form-item">
+      <input type="text" name="requestUrl" placeholder="requestUrl" value="{{requestUrl}}" />
+    </view>
+
+    <button form-type="submit" type="primary">测试</button>
+  </form>
+</view>
+
+
+
+
+<view class="rich-text-wrp">
+      <rich-text nodes="{{response}}"></rich-text>
+</view>
