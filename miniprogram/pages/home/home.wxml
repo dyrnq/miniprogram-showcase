@@ -1,0 +1,3 @@
+<!--pages/home/home.wxml-->
+<button bindtap="redirectTo" data-hi="WeChat" data-url="/pages/index/index">跳转到index页面</button>
+<button bindtap="redirectTo" data-hi="WeChat" data-url="/pages/form/form">跳转到form页面</button>
