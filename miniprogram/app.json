@@ -3,7 +3,8 @@
     "pages/home/home",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/form/form"
+    "pages/form/form",
+    "pages/requesttest/requesttest"
   ],
   "window": {
     "navigationBarTextStyle": "black",

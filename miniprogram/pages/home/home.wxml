@@ -1,3 +1,9 @@
 <!--pages/home/home.wxml-->
-<button bindtap="redirectTo" data-hi="WeChat" data-url="/pages/index/index">跳转到index页面</button>
-<button bindtap="redirectTo" data-hi="WeChat" data-url="/pages/form/form">跳转到form页面</button>
+
+
+
+<view class="weui-cell"><button type="primary" size="default" bindtap="redirectTo" data-hi="WeChat" data-url="/pages/index/index">跳转到index页面</button></view>
+<view class="weui-cell"><button type="primary" size="default" bindtap="redirectTo" data-hi="WeChat" data-url="/pages/form/form">跳转到form页面</button></view>
+<view class="weui-cell"><button type="primary" size="default" bindtap="redirectTo" data-hi="WeChat" data-url="/pages/requesttest/requesttest">跳转到requesttest</button></view>
+
+

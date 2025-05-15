@@ -1,1 +1,3 @@
 /* pages/home/home.wxss */
+
+button {margin: 10px;}

@@ -1,0 +1,2 @@
+<!--pages/requesttest/requesttest.wxml-->
+<text>{{response}}</text>
