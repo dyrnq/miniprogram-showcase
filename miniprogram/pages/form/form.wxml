@@ -1,1 +1,22 @@
 <!--pages/form.wxml-->
+<view class="fb_main">
+
+  <view class="fb_content">
+    <textarea value="{{textVal}}" bindinput="handleTextInput" placeholder="在此输入正文" name="" id="" cols="30" rows="10"></textarea>
+    <view class="fb_tool">
+      <button id="btn1" size="mini" bindtap="handleChooseImg">选择图片</button>
+      <view bindtap="handleRemoveImg" >
+        <Upimg src="{{selectedImage}}"></Upimg>
+      </view>
+    </view>
+
+  </view>
+  <view class="form_btn_wrap">
+    <button type="primary" size="default" bindtap="handleFormSubmit">
+      发布
+    </button>
+  </view>
+</view>
+
+
+<text>{{response}}</text>

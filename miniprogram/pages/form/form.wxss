@@ -1,1 +1,6 @@
 /* pages/form.wxss */
+
+
+.fb_main {
+  margin: 10px;
+}
