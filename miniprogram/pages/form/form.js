@@ -80,7 +80,8 @@ handleTextInput: function(event) {
 
 handleChooseImg: function (event) {
     wx.chooseMedia({
-      count: 9,
+      count: 1,
+      mediaType: ['image'],
       sizeType:['original','compressed'],
       sourceType:['album','camera'],
       success:(result)=>{
@@ -89,7 +90,7 @@ handleChooseImg: function (event) {
         var tempFiles = result.tempFiles;
 
         tempFiles.forEach(function(file) {
-          console.log(file.name);
+          console.log(JSON.stringify(file));
         });
 
 
